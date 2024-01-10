@@ -1,82 +1,99 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<meta charset="UTF-8">
-		<title>I love you Victoria!</title>
-		<link rel="stylesheet" type="text/css" href="./css/format.css">
-	</head>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta charset="UTF-8" />
+    <title>I love you Victoria!</title>
+    <link rel="stylesheet" type="text/css" href="./css/format.css" />
+  </head>
 
-	<body style="margin:0px">
-		<audio autoplay loop>
-			<source src="music/music.mp3" type="audio/mpeg">
-			Your browser does not support the audio.
-		</audio>
-		<canvas></canvas>
-		<div id="imgTxt">
-			<span id="Txt"></span> <br />
-			<span id="tmp"></span>
-			<img id="img" src="">
-		</div>
+  <body style="margin: 0px">
+    <audio autoplay loop>
+      <source src="music/music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio.
+    </audio>
+    <canvas></canvas>
 
-		<div id="heartTxt">
-			<span id="clickMe">Press Here!</span>
-			<div id="heart">
-				<button id="button" onclick="play()">
-					<svg id="heartbutton" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-balloon-heart-fill" viewBox="0 0 16 16">
-						<path fill-rule="evenodd" d="M8.49 10.92C19.412 3.382 11.28-2.387 8 .986 4.719-2.387-3.413 3.382 7.51 10.92l-.234.468a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2 2 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.235-.468ZM6.726 1.269c-1.167-.61-2.8-.142-3.454 1.135-.237.463-.36 1.08-.202 1.85.055.27.467.197.527-.071.285-1.256 1.177-2.462 2.989-2.528.234-.008.348-.278.14-.386"/>
-					</svg>
-				</button>
-			</div>
-		</div>
-		
-		<div id="content">
-			<h2 id="together">We have been together for!</h2>
-			<div id="timer">
-				<b>1</b> Year <b></b> and <b>9</b> Months!
-				<br> That is <b>21</b> Months!
-				<br> If you put it in weeks that would be: <b>91</b> Weeks!
-				<br> Finally, in days it would be: <b>640</b> Days!
-			</div>
-		</div>
+    <br /><br />
 
-    	<div id = "typeDiv">
-        	<span id="txt1"></span> <br />
-        	<span id="txt2"></span>
-    	</div>		
+    <div id="imgTxt">
+      <span id="Txt"></span> <br />
+      <span id="tmp"></span>
+      <img id="img" src="" />
+    </div>
 
-		<script >
-			var ok = 0;
-			var flag = 1;
-			var myImage = document.getElementById("img");
-			var myTxt = document.getElementById("Txt");
-			var imageArray = [];
+    <div id="heartTxt">
+      <span id="clickMe">Press Here!</span>
+      <div id="heart">
+        <button id="button" onclick="play()">
+          <svg
+            id="heartbutton"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="red"
+            class="bi bi-balloon-heart-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8.49 10.92C19.412 3.382 11.28-2.387 8 .986 4.719-2.387-3.413 3.382 7.51 10.92l-.234.468a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2 2 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.235-.468ZM6.726 1.269c-1.167-.61-2.8-.142-3.454 1.135-.237.463-.36 1.08-.202 1.85.055.27.467.197.527-.071.285-1.256 1.177-2.462 2.989-2.528.234-.008.348-.278.14-.386"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
 
-			for (var i = 1; i <= 45; i++) {
-				var imagePath = "img/" + i + ".jpg";
-				imageArray.push(imagePath);
-			}
+    <div id="content">
+      <h2 id="together">We have been together for!</h2>
+      <div id="timer">
+        <b>1</b> Year <b></b> and <b>9</b> Months! <br />
+        That is <b>21</b> Months! <br />
+        If you put it in weeks that would be: <b>91</b> Weeks! <br />
+        Finally, in days it would be: <b>640</b> Days!
+      </div>
+    </div>
 
-			console.log(imageArray);
+    <div id="typeDiv">
+      <span id="txt1"></span> <br />
+      <span id="txt2"></span>
+    </div>
 
-			var imageIndex = 0;
-			var txtArray = [];
+    <script>
+      var ok = 0;
+      var flag = 1;
+      var myImage = document.getElementById("img");
+      var myTxt = document.getElementById("Txt");
+      var imageArray = [];
 
-			// Fetch the text file and store lines in txtArray
-			fetch('text.txt')
-            .then(response => response.text())
-            .then(data => {
-                txtArray = data.split('\n');
-                console.log(txtArray);
-            })
-            .catch(error => console.error(error));
+      for (var i = 1; i <= 45; i++) {
+        var imagePath = "img/" + i + ".jpg";
+        imageArray.push(imagePath);
+      }
 
-			 var len = imageArray.length;
-			var t = 0;
-		</script>
-		
-		<script type="text/javascript" src="./js/stars.js"></script>
-		<script type="text/javascript" src="./js/typeWriter.js"></script>
-		<script type="text/javascript" src="./js/playImg.js"></script>
-	</body>
+      console.log(imageArray);
+
+      var imageIndex = 0;
+      var txtArray = [];
+
+      // Fetch the text file and store lines in txtArray
+      fetch("text.txt")
+        .then((response) => response.text())
+        .then((data) => {
+          txtArray = data.split("\n");
+          console.log(txtArray);
+        })
+        .catch((error) => console.error(error));
+
+      var len = imageArray.length;
+      var t = 0;
+    </script>
+
+    <script type="text/javascript" src="./js/stars.js"></script>
+    <script type="text/javascript" src="./js/typeWriter.js"></script>
+    <script type="text/javascript" src="./js/playImg.js"></script>
+  </body>
 </html>
