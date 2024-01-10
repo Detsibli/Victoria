@@ -1,8 +1,3 @@
-
-var btn = document.getElementById("heartTxt");
-btn.style.opacity = 0;
-var btnVal = 0;
-
 function showImage(){
 	//document.getElementById("imgTxt").style.opacity = 0;
 	myImage.setAttribute("src", imageArray[imageIndex]);
@@ -15,6 +10,11 @@ function showImage(){
 }
 
 function play(){
+	
+	var btn = document.getElementById("heartTxt");
+	btn.style.opacity = 0;
+	var btnVal = 0;
+
 	if(t == 0){
 		myImage.setAttribute("src", "");
 		myTxt.innerHTML = "";
@@ -25,8 +25,7 @@ function play(){
 	document.getElementById("typeDiv").style.opacity = flag;
 	document.getElementById("imgTxt").style.opacity = 1 - flag;
 	if(t == 0){
-		//setTimeout(showImage, 1000);
-		setInterval(showImage, 2500);
+		setInterval(showImage, 5000);
 	}
 	t++;
 }
